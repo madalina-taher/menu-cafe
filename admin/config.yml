@@ -1,0 +1,21 @@
+backend:
+  name: git-gateway
+  branch: main # Thabbet esm el branch mte3ek (main wala master)
+
+media_folder: "img" # El dossier win bch yet-7attou el tsawer
+public_folder: "/img"
+
+collections:
+  - name: "plats"
+    label: "Menu el 9ahwa"
+    folder: "data" # El dossier win famma el data.json
+    extension: "json"
+    format: "json"
+    create: true # Bezak tzid plat jdid
+    delete: true # Bezak tfasakh plat
+    fields:
+      - {label: "ID mta3 el Plat", name: "id", widget: "string"}
+      - {label: "Ism el Plat", name: "title", widget: "string"}
+      - {label: "Soum", name: "price", widget: "number"}
+      - {label: "Tswira", name: "image", widget: "image"}
+      - {label: "Description", name: "body", widget: "text"}
