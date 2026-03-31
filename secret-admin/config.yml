@@ -1,0 +1,25 @@
+backend:
+  name: git-gateway
+  branch: main # Thabbat ism el branch mta3ek (dima main wala master)
+
+media_folder: "img"
+public_folder: "/img"
+
+collections:
+  - name: "menu"
+    label: "Menu el 9ahwa"
+    files:
+      - name: "plats"
+        label: "Lista mta3 el Plats"
+        file: "data.json"
+        fields:
+          - name: "items"
+            label: "Les Plats"
+            widget: "list"
+            allow_add: true
+            summary: "{{title}} - {{price}} DT"
+            fields:
+              - {label: "ID (ex: expresso1)", name: "id", widget: "string"}
+              - {label: "Ism el Plat", name: "title", widget: "string"}
+              - {label: "Es-soum", name: "price", widget: "string"}
+              - {label: "Et-tswira", name: "image", widget: "image"}
